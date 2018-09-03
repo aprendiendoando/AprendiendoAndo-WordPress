@@ -1,0 +1,1483 @@
+/*
+Theme Name: Aprendiendoando
+Theme URI: https://aprendiendoando.com
+Author: Yan Arlex Vallejo
+Author URI: https://aprendiendoando.com/yan
+Description: Tema desarrollado para la comunidad de aprendiendoando
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: aprendiendoando
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   /*font-family: 'Dosis', sans-serif;
+font-family: 'Raleway', sans-serif;*/
+
+html {
+    color: #4D4D4D;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+@font-face {
+  font-family: 'aprendiendoandoicon';
+  src:  url('css/fonts/aprendiendoando/aprendiendoandoicon.eot?bm82eu');
+  src:  url('css/fonts/aprendiendoando/aprendiendoandoicon.eot?bm82eu#iefix') format('embedded-opentype'),
+    url('css/fonts/aprendiendoando/aprendiendoandoicon.ttf?bm82eu') format('truetype'),
+    url('css/fonts/aprendiendoando/aprendiendoandoicon.woff?bm82eu') format('woff'),
+    url('css/fonts/aprendiendoando/aprendiendoandoicon.svg?bm82eu#aprendiendoandoicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="aprendiendoando-"], [class*=" aprendiendoando-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'aprendiendoandoicon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.aprendiendoando-correo:before {
+  content: "\e900";
+}
+.aprendiendoando-facebook:before {
+  content: "\e901";
+}
+.aprendiendoando-rss:before {
+  content: "\e902";
+}
+.aprendiendoando-twitter:before {
+  content: "\e903";
+}
+.aprendiendoando-youtube:before {
+  content: "\e904";
+}
+
+.amarillo{
+    color:yellow;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+a{
+ transition: all .3s ease-in;
+}
+
+a:hover{
+    color: #0071BC;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*
+ * Helpers
+ */
+
+ *{
+    box-sizing: border-box;
+ }
+
+ img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+ }
+
+ .ap-breadcrumbs{
+     border-top: 10px solid #FE5352;
+     padding-top: 2rem;
+     margin-top: 0.5rem;
+ }
+
+ .ap-widget__list a{
+    color: #4D4D4D;
+    text-decoration: none;
+    font-weight: 400;
+    display:block;
+    text-align: left;
+    padding: 0.8rem 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #CCCCCC;
+ }
+
+ .ap-widget__list a:hover{
+    color:#0071BC;
+ }
+
+ .ap-widget__list a::before{
+    content: " █ ";
+    color:#0071BC;
+    margin-right:0.5rem;
+ }
+
+ .ap-widget__list a:last-child{
+    border-bottom: 0;
+ }
+
+
+
+  .title--main{
+      font-weight: 400;
+      margin: 0;
+  }
+
+ .title--main:after{
+    content: ">>";
+    margin-left: 0.5rem;
+
+ }
+
+ /*
+ * Botones
+ */
+
+ .button{
+     border-radius: 10px;
+     font-family: 'Dosis';
+     text-decoration: none;
+     color: #fff;
+     padding:0 0.5rem;
+     margin:1rem 0;
+     display: inline-block;
+     border: 0;
+     border: none;
+     cursor: pointer;
+     outline: none;
+     position: relative;
+    -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      line-height: 2.7em;
+ }
+    .button:after{
+        content: "";
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        right: 50%;
+        border-radius: inherit;
+        background-color: rgba(255, 255, 255, 0.15);
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .button:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      -webkit-transform: translateY(5px);
+      transform: translateY(5px);
+      background-color: inherit;
+      border-radius: 10px;
+      z-index: -1;
+      box-shadow: inset 0 -6px 10px rgba(0, 0, 0, 0.75);
+    }
+
+    .button:hover{
+        color: #fff;
+        background-color: #FA5364;
+    }
+
+    .button:hover:after,
+    .button.hover:after {
+      left: 0;
+      right: 0;
+    }
+
+
+
+
+    .button--main{
+        background-color: #FF5253;
+        text-align: center;
+        max-width: 150px;
+        margin-right: auto;
+        margin-left: auto;
+        display:block;
+    }
+
+
+
+
+
+.box{
+    width: 100%;
+    max-width: 1175px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+    .box--center{
+        max-width: 1000px;
+    }
+
+    .box__courses{
+        display: flex;
+        justify-content: space-around;
+        color:#fff;
+        padding: 5rem 15px;
+        flex-direction: column;
+    }
+
+    .box__courses--intern{
+        padding-bottom: 2.5rem;
+        padding-top: 2.5rem;
+    }
+
+    .box__courses--one{
+        background-color: #369DC1;
+        border-radius: 10px;
+        padding: 2rem 0;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .box__courses--one a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+         color:#fff;
+    }
+
+
+    .box__courses--one div{
+        width: 100%;
+        text-align: right;
+        padding-right: 1rem;
+    }
+
+    .box__courses--one h4{
+        font-size: 2.5rem;
+        font-weight: 500;
+        border-bottom: 1px solid #fff;
+        margin:0;
+        text-align: right;
+        line-height: 1;
+        padding-bottom: 0.7rem;
+    }
+
+    .box__courses--one p{
+        font-size: 1.2rem;
+    }
+
+    .box__courses--dos{
+        background-color: #566270;
+    }
+
+    @media screen and (min-width: 768px){
+        .box__courses{
+            flex-direction: row;
+        }
+
+         .box__courses--one{
+            margin-bottom: 0;
+            margin-right: 0.5rem;
+
+         }
+
+         .box__courses--one a{
+            flex-direction: row;
+            justify-content: space-around;
+            max-width: 485px;
+            margin-right: 0.5rem;
+         }
+
+         .box__courses--dos{
+            margin-right: 0;
+         }
+    }
+
+    @media screen and (min-width: 1024px){
+
+
+        .box__courses--one{
+            margin-right: 2rem;
+        }
+
+        .box__courses--dos{
+            margin-right: 0;
+         }
+    }
+
+.blog .list-courses__information{
+    padding-bottom: 0.2rem;
+}
+
+.blog__footer ul{
+    margin-left: 0.8rem;
+}
+
+.blog__footer li a{
+    text-decoration: none;
+    color: #4D4D4D;
+    font-family:'Raleway', arial;
+    font-size: 0.8rem;
+    display: block;
+    padding: 0 0.2rem;
+}
+
+    .blog__footer li a:hover{
+        color:#0071BC;
+    }
+
+    .blog__footer li a::after{
+        content: " | ";
+        color: #0071BC;
+    }
+
+        .blog__footer li:last-child a::after{
+            content: "";
+        }
+
+.contact__form{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ccc;
+}
+
+.courseInformation{
+    display: flex;
+    flex-direction: column;
+}
+
+    .courseInformation__teacher{
+        border-top: 1px solid #F5F5F5;
+        font-weight: 600;
+        padding: 5rem 0;
+    }
+
+        .courseInformation__teacher--image{
+            max-width: 130px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .courseInformation__teacher--image figcaption{
+            color: #4D4D4D;
+
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .courseInformation__teacher--price{
+            /*margin-top: 2rem;*/
+        }
+
+        .courseInformation__teacher--titleSecundary{
+            display: block;
+            color: #000000;
+            font-size: 1.5rem;
+        }
+
+        .courseInformation__teacher--value{
+            display: block;
+            color: #4D4D4D;
+            font-size: 1.2rem;
+        }
+            .ap-price{
+                color: #0071BC;
+                font-size: 2.5rem;
+            }
+
+
+
+@media screen and (min-width:768px){
+
+    .courseInformation{
+        flex-direction: row;
+    }
+
+
+    .courseInformation__content{
+        max-width: 70%;
+    }
+
+    .courseInformation__teacher{
+        margin-left: auto;
+        background-color: #FAFDFF;
+        padding: 0 2.5rem;
+        margin-top: 1rem;
+    }
+}
+
+
+@media screen and (min-width:1024px){
+
+    .courseInformation__content{
+        max-width: 70%;
+    }
+
+    .courseInformation__teacher{
+        padding: 0 4rem;
+    }
+}
+
+@media screen and (min-width:1200px){
+
+    .courseInformation__teacher{
+        padding: 0 5rem;
+    }
+}
+
+.courseSyllabus__item{
+    border-bottom: 2px solid #CDCDCD;
+}
+.courseSyllabus__item li{
+    color:#000000;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.courseSyllabus__title{
+    font-weight: 400;
+    color: #0071BC;
+    font-size: 1.4rem;
+}
+
+.text--uppercase{
+    text-transform: uppercase;
+}
+
+.list-none{
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+}
+.overlay{
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.3);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.img-responsive{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.sin-margin{
+    margin: 0;
+    padding: 0;
+}
+
+.text-center{
+    text-align: center;
+    display: block;
+}
+
+.decoration-none{
+    text-decoration: none;
+    color: #4D4D4D;
+}
+
+.decoration-none{
+     text-decoration: none;
+}
+
+.mb-5{
+    margin-bottom: 80px;
+}
+
+.ml-0{
+    margin-left: 0;
+}
+
+.featured-courses{
+    background-color: #F5F5F5;
+}
+
+
+.filterCourses__form{
+    background-color: #F2F2F2;
+    color: #000;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.filterCourses__select select{
+    padding: 0.2rem 1rem;
+    display: block;
+    width: 250px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.filterCourses__tags{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.filterCourses__tags span{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.ap-tags{
+    display: flex;
+    flex-direction: column;
+
+
+}
+    .ap-tags li{
+        list-style-type: none;
+    }
+    .ap-tags a{
+        text-decoration: none;
+        display: block;
+        border-radius:5px;
+        border:1px solid #999999;
+        color:#000;
+        padding: 0.2rem 0.5rem;
+        margin-bottom: 1rem;
+    }
+        .ap-tags a:hover{
+            background-color: #0071BC;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .ap-tags li:last-child a{
+            margin-right: 0;
+        }
+
+    @media screen and (min-width:480px){
+        .ap-tags{
+            flex-direction: row;
+        }
+
+        .ap-tags a{
+            margin-right: 1rem;
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (min-width:768px){
+        .filterCourses__form,
+        .filterCourses__tags{
+           flex-direction: row;
+        }
+
+        .filterCourses__select select{
+            margin-bottom: 0;
+        }
+
+        .filterCourses__tags span{
+            margin-bottom: 0;
+        }
+
+
+    }
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color:#4D4D4D;
+    flex-direction: column;
+}
+
+    .footer a{
+        color:#4D4D4D;
+        font-size: 1.2rem;
+    }
+
+    .footer__mail{
+        margin-bottom: 1rem;
+    }
+
+    .footer li{
+        margin:0.2rem;
+    }
+
+    .footer a:hover{
+        color: #0071BC;
+    }
+
+.header{
+    font-family: 'Relaway' , Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+    .header__top,
+    .header__bottom,
+    .nav__main ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header__top,
+    .header__top a{
+        color:#CCCCCC;
+    }
+
+    .header__top{
+        border-bottom: 2px solid #CCCCCC;
+        padding: 0.5rem 0 0.2rem;
+    }
+
+    .header__rs{
+        width: 100%;
+    }
+
+    .header__rs ul{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header__rs li{
+        margin:0.2rem;
+    }
+
+    .header__rs a{
+        font-size: 1.3rem;
+        transition: all .3s ease-in;
+    }
+        .redes_sociales a:hover,
+        .header__rs a:hover{
+            color:#0071BC;
+        }
+
+    .header__mail{
+        display: none;
+    }
+
+    @media screen and (min-width: 768px){
+        .header__mail{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .header__mail a{
+            transition: .3s all ease-in;
+        }
+
+        .header__mail a:hover{
+            color: #0071BC;
+        }
+
+
+        .aprendiendoando-correo{
+            margin-right: 0.5rem;
+
+        }
+
+        .aprendiendoando-correo:hover{
+            color: #0071BC;
+        }
+
+        .header__rs ul{
+            justify-content: flex-end;
+        }
+    }
+
+    .header__bottom{
+        align-items: center;
+        padding: 1rem 0;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 768px){
+        .header__bottom{
+            justify-content: space-between;
+        }
+    }
+@media screen and (min-width: 768px){
+      .logo{
+        max-width: 230px;
+    }
+}
+
+@media screen and (min-width: 900px){
+      .logo{
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+      .logo{
+        max-width: 350px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+      .logo{
+        max-width: 400px;
+    }
+}
+
+
+.list-courses,
+.list-courses .box{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+    .list-courses__item{
+        max-width: 350px;
+        border:1px solid #D2D2D2;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 1.7rem 0;
+        -moz-box-shadow: 1px 1px 3px #D2D2D2;
+        -webkit-box-shadow: 1px 1px 3px #D2D2D2;
+        box-shadow: 1px 1px 3px #D2D2D2;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .list-courses__item:hover{
+           -moz-box-shadow: 2px 2px 5px #ADADAD;
+            -webkit-box-shadow: 2px 2px 5px #ADADAD;
+            box-shadow: 2px 2px 5px #ADADAD;
+        }
+
+    @media screen and (min-width: 768px){
+        .list-courses,
+        .list-courses .box{
+            justify-content: center;
+        }
+        .list-courses__item{
+            margin-right: 1rem;
+            margin-left: 1rem;
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (min-width:1024px){
+        .list-courses,
+        .list-courses .box{
+            justify-content: space-between;
+        }
+        .list-courses__item{
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    .list-courses__information{
+        padding: 1rem;
+    }
+
+        .list-courses__information h3{
+            font-weight: 500;
+            font-size:1.5rem;
+
+        }
+
+         .list-courses__information p{
+            font-size:1.1rem;
+            border-bottom:1px solid #CDCDCD;
+            padding-bottom: 0.5rem;
+
+        }
+
+    .list-courses__author{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem 1rem;
+        font-family: 'Raleway', sans-serif;
+    }
+
+
+
+    .list-courses__author figure a{
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .list-courses__author figure img{
+        max-width: 30%;
+        margin-right: 0.5rem;
+    }
+
+    .list-courses__author div{
+        text-align: right;
+        padding-right: 0.3rem;
+    }
+
+    .list-courses__author div a{
+        font-weight: 400;
+        display: block;
+    }
+
+.price{
+    text-align: center;
+    padding: 0.5rem 0;
+    color:#fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+    .price--free{
+        background-color: #FF5253;
+    }
+
+    .price--premiun{
+         background-color: #6CC8BD;
+    }
+
+
+
+.nav__main{
+    display: none;
+}
+    .nav__main li{
+        margin:0 0.8rem;
+    }
+
+    .nav__main li:last-child{
+        margin-right: 0;
+    }
+    .nav__main a{
+        color: #4D4D4D;
+        font-size:1.4rem;
+        overflow: hidden;
+    }
+    .nav__main a.active{
+        font-weight: 800;
+    }
+
+@media screen and (min-width: 768px){
+    .nav__main{
+        display: block;
+    }
+
+    .nav__main a{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 980px){
+    .nav__main a{
+        font-size: 1.4rem;
+    }
+}
+
+    /*Menu de navegación*/
+
+    .nav__top a {
+      padding: 0.5em 0;
+      position: relative;
+      letter-spacing: 1px;
+      text-decoration: none;
+
+    }
+    .nav__top a:before,
+    .nav__top a:after {
+      position: absolute;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+    }
+    .nav__top a:before {
+      bottom: 0;
+      display: block;
+      height: 3px;
+      width: 0%;
+      content: "";
+      background-color: #2980b9;
+    }
+    .nav__top a:after {
+      left: 0;
+      top: 0;
+      padding: 0.38em 0;
+      position: absolute;
+      content: attr(data-hover);
+      color: #0071BC;
+      white-space: nowrap;
+      max-width: 0%;
+      overflow: hidden;
+    }
+    .nav__top a:hover:before,
+    .nav__top .current-menu-item a:before {
+      opacity: 1;
+      width: 100%;
+    }
+    .nav__top a:hover:after,
+    .nav__top .current-menu-item a:after {
+      max-width: 100%;
+    }
+
+.main{
+    margin:1rem 0;
+}
+
+.mt-0{
+     margin-top: 0;
+ }
+
+.mt-1{
+    margin-top: 1rem;
+}
+
+.mt-2{
+    margin-top: 2rem;
+}
+
+.mt-3{
+    margin-top: 3rem;
+}
+
+.mt-5{
+    margin-top: 5rem;
+}
+
+.pb-1{
+     padding-bottom: 1rem;
+ }
+
+ .pb-2{
+     padding-bottom: 2rem;
+ }
+
+ .pb-3{
+     padding-bottom: 3rem;
+ }
+
+ .pb-4{
+     padding-bottom: 4rem;
+ }
+
+ .pb-5{
+     padding-bottom: 5rem;
+ }
+
+
+
+.slider{
+    display: none;
+    background-image: url("img/startup.jpg");
+    padding:8rem 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color:#fff;
+    position: relative;
+}
+
+    .slider__information{
+        z-index: 1;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .slider__left{
+        max-width: 500px;
+    }
+
+    @media screen and (min-width:768px){
+        .slider{
+            display: block;
+        }
+    }
+
+.title{
+    font-family: 'Dosis',Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    margin:0.5rem 0;
+}
+
+    .title--big{
+        font-weight: 600;
+        font-size: 4rem;
+        text-transform: uppercase;
+        line-height: 1.3;
+    }
+
+    .title--small{
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    .title--single{
+        padding-bottom: 1rem;
+        border-bottom:3px solid #CCCCCC;
+        margin-bottom: 2rem;
+        color: #232323;
+    }
+
+    .title--secundary{
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        color: #000;
+    }
+
+.register{
+    background-color: #566270;
+    color: #fff;
+}
+
+    .register .box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5rem 0;
+        flex-direction: column;
+    }
+
+    .register__testimonial{
+        display: none;
+    }
+
+        .register__testimonial strong{
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        .register__user{
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+            .register__user figure{
+                max-width: 120px;
+            }
+
+        .register__information{
+            margin-left:1rem;
+            border-bottom:1px solid #fff;
+            padding-bottom:1rem;
+        }
+
+    .register__newsletter{
+       max-width:90%;
+       border:1px solid #fff;
+       border-radius:10px;
+       padding: 3rem 1rem;
+    }
+
+        .register__newsletter strong{
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 400;
+            display: block;
+        }
+
+        .register__newsletter input[type="text"]{
+            display: block;
+            width: 100%;
+            text-align: center;
+            border-radius: 5px;
+            border:0;
+            padding:0.5rem;
+            box-sizing: border-box;
+        }
+
+@media screen and (min-width: 768px){
+    .register .box{
+        flex-direction: row;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .register__testimonial{
+        max-width:55%;
+        display: block;
+    }
+
+    .register__newsletter{
+        max-width: 35%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .register__testimonial{
+        max-width:40%;
+    }
+
+    .register__newsletter{
+        max-width: 30%;
+    }
+}
+
+.yan{
+    /*padding: 3rem 0;*/
+}
+
+    .yan h1{
+        margin: 0;
+    }
+
+
+
+
+.youtube-analytics{
+    background-color: #F9F9F9;
+    padding: 3rem 0;
+}
+
+    .youtube-analytics__date{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .youtube-analytics__date figure{
+        max-width: 70px;
+        width: 100%;
+        margin:1rem;
+    }
+
+    @media screen and (min-width: 768px){
+       .youtube-analytics__date figure{
+        max-width: 119px;
+       }
+    }
+
+    .youtube-analytics__information{
+        text-align: center;
+        max-width: 80%;
+        width: 100%;
+        margin-left:auto;
+        margin-right:auto;
+        font-size: 1.4rem;
+    }
+
+    .youtube-analytics__number span{
+        color: #FF5253;
+        display:block;
+        font-size:3.5rem;
+    }
+    .youtube-analytics__number strong{
+        color: #0071BC;
+        display:block;
+        font-size:1.3rem;
+        font-weight: 500;
+    }
+
+    @media screen and (min-width: 768px){
+        .youtube-analytics{
+             padding-top: 5rem;
+             padding-bottom: 5rem;
+        }
+            .youtube-analytics__information{
+                max-width: 70%;
+                font-size: 1.6rem;
+                margin-bottom: 0;
+            }
+
+            .youtube-analytics__date figure{
+                margin-top: 0;
+            }
+            .youtube-analytics__number span{
+                font-size:4.5rem;
+            }
+            .youtube-analytics__number strong{
+               font-size:2rem;
+            }
+    }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.d-flex{
+    display: flex;
+}
+
+.w-100{
+    flex-basis: 100%;
+}
+
+.rounded-circle{
+    border-radius: 50%;
+    border:1px solid #0071BC;
+}
+
+.fontRegular{
+    font-weight: 400;
+}
+
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

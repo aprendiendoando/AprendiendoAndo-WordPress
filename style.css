@@ -542,6 +542,22 @@ textarea {
     font-size: 1.4rem;
 }
 
+.content-not-found{
+    text-align: center;
+    width:100%;
+    font-size: 1.5rem;
+    box-shadow: 1px 2px 10px #DB3A34;
+    margin-bottom: 4rem;
+    font-weight: 700;
+    font-family: 'Raleway', arial;
+    font-style: italic;
+    padding: 0.5rem 0;
+}
+
+    .content-not-found p{
+        margin:0.5rem 0;
+    }
+
 .text--uppercase{
     text-transform: uppercase;
 }
@@ -894,20 +910,31 @@ textarea {
 
     .list-courses__author{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         padding: 0 1rem 1rem;
         font-family: 'Raleway', sans-serif;
     }
 
-
+    .list-courses__author figure{
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
+    }
 
     .list-courses__author figure a{
         display: flex;
         align-items: center;
         font-weight: 500;
         font-style: italic;
+        text-decoration: none;
+        color:#FF5253;
+        transition: .3s all ease-out;
     }
+
+        .list-courses__author figure a:hover{
+            text-decoration: underline;
+        }
 
     .list-courses__author figure img{
         max-width: 30%;
@@ -1185,6 +1212,13 @@ textarea {
             display: block;
         }
 
+        @media screen and (min-width: 1200px){
+            .register__newsletter strong{
+                font-size:1.4rem;
+                font-weight: 300;
+            }
+        }
+
         .register__newsletter input[type="text"]{
             display: block;
             width: 100%;
@@ -1219,6 +1253,22 @@ textarea {
 
     .register__newsletter{
         max-width: 30%;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .register__testimonial{
+        max-width: 50%;
+    }
+
+    .register__testimonial strong{
+        font-size:2rem;
+    }
+
+    .register__newsletter{
+        max-width: 33%;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 

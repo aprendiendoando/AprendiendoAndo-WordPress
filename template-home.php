@@ -54,9 +54,8 @@
                     endwhile;
                 endif;
             ?>
-
         </section> <!-- End Courses -->
-        <section class="box list-courses">
+        <section class="box ">
             <?php
             // Loop Last Courses LearnPress
                 $args = array(
@@ -65,62 +64,65 @@
                     );
                 $lastPost = new WP_Query( $args );
                 if( $lastPost->have_posts() ):
-                    while( $lastPost->have_posts() ): $lastPost->the_post(); ?>
-                        <article class="list-courses__item">
-                            <figure class="list-courses__image sin-margin">
-                                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                                    <?php echo $course->get_image( 'course_thumbnail' ); ?>
-                                </a>
-                                <figcaption class="price price--free">
-                                    <?php if ( $course->has_sale_price() ) { ?>
-                                        <span class="price--fixed">
-                                            <?php echo $course->get_origin_price_html() ?>
-                                        </span> |
-                                    <?php } ?>
-                                    <span class="price-promotion">
-                                        <?php echo $course->get_price_html() ?>
-                                    </span>
-                                </figcaption>
-                            </figure>
-                            <div class="list-courses__information">
-                                <a href="<?php the_permalink(); ?>" class="decoration-none" title="Curso de Bootstrap">
-                                    <h3 class="sin-margin"><?php the_title(); ?></h3>
-                                </a>
-                                <p><?php the_excerpt(); ?></p>
-                            </div>
-                            <footer class="list-courses__author">
-                                <figure class="sin-margin">
-                                    <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                                        <?php
-                                            $user = wp_get_current_user();
-                                            if ( $user ) :
-                                               ?>
-                                                    <img class="img-responsive" src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?> " width="100" height="100" />
-                                                <?php endif; ?>
-                                        <figcaption><?php the_author( ); ?></figcaption>
+                    ?>
+                    <div class="list-courses">
+                    <?php
+                        while( $lastPost->have_posts() ): $lastPost->the_post(); ?>
+                            <article class="list-courses__item">
+                                <figure class="list-courses__image sin-margin">
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                        <?php echo $course->get_image( 'course_thumbnail' ); ?>
                                     </a>
+                                    <figcaption class="price price--free">
+                                        <?php if ( $course->has_sale_price() ) { ?>
+                                            <span class="price--fixed">
+                                                <?php echo $course->get_origin_price_html() ?>
+                                            </span> |
+                                        <?php } ?>
+                                        <span class="price-promotion">
+                                            <?php echo $course->get_price_html() ?>
+                                        </span>
+                                    </figcaption>
                                 </figure>
-                                <div>
-                                <?php $term_list = get_the_term_list( get_the_ID(), 'course_category', '', ', ', '' );
-                                    if ( $term_list ) {
-                                        echo $term_list;
-                                    }
-                                ?>
-                                <span>11 Videos 3 Horas</span>
+                                <div class="list-courses__information">
+                                    <a href="<?php the_permalink(); ?>" class="decoration-none" title="Curso de Bootstrap">
+                                        <h3 class="sin-margin"><?php the_title(); ?></h3>
+                                    </a>
+                                    <?php the_excerpt(); ?>
                                 </div>
-                            </footer>
-                        </article>
+                                <footer class="list-courses__author">
+                                    <figure class="sin-margin list-courses__meta">
+                                        <?php echo $course->get_instructor()->get_profile_picture(); ?>
+                                        <?php echo $course->get_instructor_html(); ?>
+                                    </figure>
+                                    <div>
+                                        <?php $term_list = get_the_term_list( get_the_ID(), 'course_category', '', ', ', '' );
+                                            if ( $term_list ) {
+                                                echo $term_list;
+                                            }
+                                        ?>
+                                        <span><?php echo $course->duration;?></span>
+                                    </div>
+                                </footer>
+                            </article>
+                    <?php
+                        endwhile;
+                    ?>
+                    </div>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>cursos/" class="button button--main mb-5 mt-3 button--animation" title="Ver todos los cursos">
+                        Ver todos los cursos
+                    </a>
                 <?php
-                    endwhile;
+                else:
+                    get_template_part( 'content', 'missing' );
                 endif;
                 wp_reset_postdata();
-                ?>
+            ?>
         </section> <!-- End List Courses -->
-            <a href="cursos.html" class="button button--main mb-5 button--animation" title="Ver todos los cursos">Ver todos los cursos</a>
         <section class="register">
             <div class="box box--center">
                 <article class="register__testimonial">
-                    <strong class="text--uppercase">algunos estudiantes cuentan su experiencia</strong>
+                    <strong class="text--uppercase">Algunos estudiantes cuentan su experiencia</strong>
                     <div class="register__user">
                         <figure class="sin-margin">
                             <img src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="">

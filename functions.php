@@ -41,14 +41,14 @@ function aprendiendoando_theme_setup() {
 }
 add_action('init', 'aprendiendoando_theme_setup');
 
-   /*
+/*
 	==========================================
 	 Page Options
 	==========================================
 */
 
 if( function_exists('acf_add_options_page') ) {
-	
+
 	acf_add_options_page(array(
 		'page_title' 	=> 'Configuración general del tema',
 		'menu_title'	=> 'Aprendiendoando',
@@ -57,5 +57,20 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 }
+
+
+/*
+	==========================================
+	 Youtube API
+	==========================================
+*/
+
+// Funcionalidad sacada de esta URL, logicamente por razones de seguridad no puedo subir los parametros solicitados en la funcion que se utilizo para mostrar la cantidad de suscriptores del canal aprendiendoando
+// https://gist.github.com/nonsintetic/9adb5c4a07b43e098473bdc76ff259a6#gistcomment-2266176
+
+
+require_once(get_template_directory().'/functions/youtube.php');
+
+
 
 ?>

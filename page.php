@@ -1,46 +1,65 @@
+Holas
 <?php get_header(); ?>
-    <main class="main">
-        <?php
-                if( have_posts() ):
-                    while( have_posts() ): the_post();
-                        the_title();
-                        the_content();
-                    endwhile;
-                endif;
+    <aside class="ap-breadcrumbs">
+        <div class="box">
+            <h1 class="title--main">Cursos</h1>
+        </div>
+    </aside>
+    <main class="main mt-0">
 
-        ?>
-
-        <section class="box box__courses">
-            <?php
-                // check if the repeater field has rows of data
-                if( have_rows('caja','option') ):
-                    $bandera = 0;
-                    // loop through the rows of data
-                    while ( have_rows('caja','option') ) : the_row();
-            ?>
-                        <article class="box__courses--one <?php if ($bandera != 0) { echo 'box__courses--dos'; }?> ">
-                            <a href="<?php the_sub_field('url_de_la_seccion', 'option'); ?>">
-                                <figure>
-                                    <img src="<?php the_sub_field('populares_icono', 'option'); ?>" alt="" width="103" height="118">
-                                </figure>
-                                <div>
-                                    <h4><?php the_sub_field('titulo_de_la_seccion', 'option'); ?></h4>
-                                    <p><?php the_sub_field('subtitulo_de_la_seccion', 'option'); ?></p>
-                                </div>
-                            </a>
-                        </article> <!-- End Courses -->
-            <?php
-                    $bandera++;
-                    endwhile;
-                endif;
-            ?>
-
+       <section class="box box__courses box__courses--intern">
+            <article class="box__courses--one">
+                <a href="#">
+                    <figure>
+                        <img src="img/cursos-populares.png" alt="" width="103" height="118">
+                    </figure>
+                    <div>
+                        <h4>Cursos
+                            <br> Populares</h4>
+                        <p>Los mas visto, y mejor calificados</p>
+                    </div>
+                </a>
+            </article> <!-- End Courses one -->
+            <article class="box__courses--one box__courses--dos">
+                <a href="#">
+                    <figure>
+                        <img src="img/lo-mas-reciente.png" alt="" width="103" height="118">
+                    </figure>
+                    <div>
+                        <h4>Los más
+                            <br>Recientes</h4>
+                        <p>Últimos lanzamientos</p>
+                    </div>
+                </a>
+            </article> <!-- End Courses two -->
         </section> <!-- End Courses -->
-        <section class="box list-courses">
+        <aside class="box filterCourses">
+            <form action="" class="filterCourses__form">
+                <div class="filterCourses__select">
+                    <select name="" id="">
+                        <option value="Seleccione">Seleccione</option>
+                        <option value="Seleccione">Desarrollo Web</option>
+                        <option value="Seleccione">Desarrollo Mobile</option>
+                        <option value="Seleccione">Programación para niños</option>
+                    </select>
+                </div>
+                <div class="filterCourses__tags">
+                    <span>Etiquetas: </span>
+                    <ul class="ap-tags list-none">
+                        <li><a href="#">Diseño Web</a></li>
+                        <li><a href="#">Bootstrap</a></li>
+                        <li><a href="#">SublimeText</a></li>
+                        <li><a href="#">Css</a></li>
+                    </ul>
+                </div>
+            </form>
+
+        </aside>
+        <section class="box list-courses pb-5">
             <article class="list-courses__item">
                 <figure class="list-courses__image sin-margin">
                     <a href="single-courses.html" title="Curso de Bootstrap">
-                        <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
+                        <img class="img-responsive" src="img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
                     </a>
                     <figcaption class="price price--free">Gratis</figcaption>
                 </figure>
@@ -53,7 +72,7 @@
                 <footer class="list-courses__author">
                     <figure class="sin-margin">
                         <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                            <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
+                            <img class="img-responsive" src="img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
                             <figcaption>Yan Vallejo</figcaption>
                         </a>
                     </figure>
@@ -66,7 +85,7 @@
             <article class="list-courses__item">
                 <figure class="list-courses__image sin-margin">
                     <a href="single-courses.html" title="Curso de Bootstrap">
-                        <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
+                        <img class="img-responsive" src="img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
                     </a>
                     <figcaption class="price price--free">Gratis</figcaption>
                 </figure>
@@ -79,7 +98,7 @@
                 <footer class="list-courses__author">
                     <figure class="sin-margin">
                         <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                            <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
+                            <img class="img-responsive" src="img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
                             <figcaption>Yan Vallejo</figcaption>
                         </a>
                     </figure>
@@ -92,7 +111,7 @@
             <article class="list-courses__item">
                 <figure class="list-courses__image sin-margin">
                     <a href="single-courses.html" title="Curso de Bootstrap">
-                        <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
+                        <img class="img-responsive" src="img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
                     </a>
                     <figcaption class="price price--premiun">Premium - $ 10</figcaption>
                 </figure>
@@ -105,7 +124,7 @@
                 <footer class="list-courses__author">
                     <figure class="sin-margin">
                         <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                            <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
+                            <img class="img-responsive" src="img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
                             <figcaption>Yan Vallejo</figcaption>
                         </a>
                     </figure>
@@ -118,7 +137,33 @@
             <article class="list-courses__item">
                 <figure class="list-courses__image sin-margin">
                     <a href="single-courses.html" title="Curso de Bootstrap">
-                        <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
+                        <img class="img-responsive" src="img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
+                    </a>
+                    <figcaption class="price price--free">Gratis</figcaption>
+                </figure>
+                <div class="list-courses__information">
+                   <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
+                        <h3 class="sin-margin">Bootstrap, Lo mejor del mundo Parte 1</h3>
+                    </a>
+                    <p>Conoce el maravilloso framework que ha revolucionado la manera de trabajar para web</p>
+                </div>
+                <footer class="list-courses__author">
+                    <figure class="sin-margin">
+                       <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
+                            <img class="img-responsive" src="img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
+                            <figcaption>Yan Vallejo</figcaption>
+                        </a>
+                    </figure>
+                    <div>
+                        <a href="#" class="decoration-none">Diseño Web</a>
+                        <span>11 Videos 3 Horas</span>
+                    </div>
+                </footer>
+            </article>
+            <article class="list-courses__item">
+                <figure class="list-courses__image sin-margin">
+                    <a href="single-courses.html" title="Curso de Bootstrap">
+                        <img class="img-responsive" src="img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
                     </a>
                     <figcaption class="price price--free">Gratis</figcaption>
                 </figure>
@@ -131,7 +176,7 @@
                 <footer class="list-courses__author">
                     <figure class="sin-margin">
                         <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                            <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
+                            <img class="img-responsive" src="img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
                             <figcaption>Yan Vallejo</figcaption>
                         </a>
                     </figure>
@@ -144,33 +189,7 @@
             <article class="list-courses__item">
                 <figure class="list-courses__image sin-margin">
                     <a href="single-courses.html" title="Curso de Bootstrap">
-                        <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
-                    </a>
-                    <figcaption class="price price--free">Gratis</figcaption>
-                </figure>
-                <div class="list-courses__information">
-                    <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                        <h3 class="sin-margin">Bootstrap, Lo mejor del mundo Parte 1</h3>
-                    </a>
-                    <p>Conoce el maravilloso framework que ha revolucionado la manera de trabajar para web</p>
-                </div>
-                <footer class="list-courses__author">
-                    <figure class="sin-margin">
-                        <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                            <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
-                            <figcaption>Yan Vallejo</figcaption>
-                        </a>
-                    </figure>
-                    <div>
-                        <a href="#" class="decoration-none">Diseño Web</a>
-                        <span>11 Videos 3 Horas</span>
-                    </div>
-                </footer>
-            </article>
-            <article class="list-courses__item">
-                <figure class="list-courses__image sin-margin">
-                    <a href="single-courses.html" title="Curso de Bootstrap">
-                        <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
+                        <img class="img-responsive" src="img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
                     </a>
                     <figcaption class="price price--premiun">Premium - $ 10</figcaption>
                 </figure>
@@ -183,7 +202,7 @@
                 <footer class="list-courses__author">
                     <figure class="sin-margin">
                         <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                            <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
+                            <img class="img-responsive" src="img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
                             <figcaption>Yan Vallejo</figcaption>
                         </a>
                     </figure>
@@ -194,14 +213,15 @@
                 </footer>
             </article>
         </section> <!-- End List Courses -->
-            <a href="cursos.html" class="button button--main mb-5 button--animation" title="Ver todos los cursos">Ver todos los cursos</a>
+
+
         <section class="register">
             <div class="box box--center">
                 <article class="register__testimonial">
                     <strong class="text--uppercase">algunos estudiantes cuentan su experiencia</strong>
                     <div class="register__user">
                         <figure class="sin-margin">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="">
+                            <img src="img/yan-arlex-vallejo.jpg" alt="">
                         </figure>
                         <div class="register__information">
                             <h3>Yan Vallejo</h3>

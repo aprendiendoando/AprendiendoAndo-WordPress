@@ -22,7 +22,7 @@
                     <img src="<?php echo get_template_directory_uri() ?>/img/youtube-suscriptores.png" alt="Youtube Aprendiendoando" width="119" height="119">
                 </figure>
                 <div class="youtube-analytics__number">
-                    <span>12,199</span>
+                    <span><?php apreYoutube(); ?></span>
                     <strong>< Suscriptores /></strong>
                 </div>
             </div>
@@ -57,162 +57,64 @@
 
         </section> <!-- End Courses -->
         <section class="box list-courses">
-            <article class="list-courses__item">
-                <figure class="list-courses__image sin-margin">
-                    <a href="single-courses.html" title="Curso de Bootstrap">
-                        <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
-                    </a>
-                    <figcaption class="price price--free">Gratis</figcaption>
-                </figure>
-                <div class="list-courses__information">
-                    <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                        <h3 class="sin-margin">Bootstrap, Lo mejor del mundo Parte 1</h3>
-                    </a>
-                    <p>Conoce el maravilloso framework que ha revolucionado la manera de trabajar para web</p>
-                </div>
-                <footer class="list-courses__author">
-                    <figure class="sin-margin">
-                        <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                            <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
-                            <figcaption>Yan Vallejo</figcaption>
-                        </a>
-                    </figure>
-                    <div>
-                        <a href="#" class="decoration-none">Diseño Web</a>
-                        <span>11 Videos 3 Horas</span>
-                    </div>
-                </footer>
-            </article>
-            <article class="list-courses__item">
-                <figure class="list-courses__image sin-margin">
-                    <a href="single-courses.html" title="Curso de Bootstrap">
-                        <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
-                    </a>
-                    <figcaption class="price price--free">Gratis</figcaption>
-                </figure>
-                <div class="list-courses__information">
-                    <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                        <h3 class="sin-margin">Bootstrap, Lo mejor del mundo Parte 1</h3>
-                    </a>
-                    <p>Conoce el maravilloso framework que ha revolucionado la manera de trabajar para web</p>
-                </div>
-                <footer class="list-courses__author">
-                    <figure class="sin-margin">
-                        <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                            <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
-                            <figcaption>Yan Vallejo</figcaption>
-                        </a>
-                    </figure>
-                    <div>
-                        <a href="#" class="decoration-none">Diseño Web</a>
-                        <span>11 Videos 3 Horas</span>
-                    </div>
-                </footer>
-            </article>
-            <article class="list-courses__item">
-                <figure class="list-courses__image sin-margin">
-                    <a href="single-courses.html" title="Curso de Bootstrap">
-                        <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
-                    </a>
-                    <figcaption class="price price--premiun">Premium - $ 10</figcaption>
-                </figure>
-                <div class="list-courses__information">
-                    <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                        <h3 class="sin-margin">Bootstrap, Lo mejor del mundo Parte 1</h3>
-                    </a>
-                    <p>Conoce el maravilloso framework que ha revolucionado la manera de trabajar para web</p>
-                </div>
-                <footer class="list-courses__author">
-                    <figure class="sin-margin">
-                        <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                            <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
-                            <figcaption>Yan Vallejo</figcaption>
-                        </a>
-                    </figure>
-                    <div>
-                        <a href="#" class="decoration-none">Diseño Web</a>
-                        <span>11 Videos 3 Horas</span>
-                    </div>
-                </footer>
-            </article>
-            <article class="list-courses__item">
-                <figure class="list-courses__image sin-margin">
-                    <a href="single-courses.html" title="Curso de Bootstrap">
-                        <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
-                    </a>
-                    <figcaption class="price price--free">Gratis</figcaption>
-                </figure>
-                <div class="list-courses__information">
-                    <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                        <h3 class="sin-margin">Bootstrap, Lo mejor del mundo Parte 1</h3>
-                    </a>
-                    <p>Conoce el maravilloso framework que ha revolucionado la manera de trabajar para web</p>
-                </div>
-                <footer class="list-courses__author">
-                    <figure class="sin-margin">
-                        <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                            <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
-                            <figcaption>Yan Vallejo</figcaption>
-                        </a>
-                    </figure>
-                    <div>
-                        <a href="#" class="decoration-none">Diseño Web</a>
-                        <span>11 Videos 3 Horas</span>
-                    </div>
-                </footer>
-            </article>
-            <article class="list-courses__item">
-                <figure class="list-courses__image sin-margin">
-                    <a href="single-courses.html" title="Curso de Bootstrap">
-                        <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
-                    </a>
-                    <figcaption class="price price--free">Gratis</figcaption>
-                </figure>
-                <div class="list-courses__information">
-                    <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                        <h3 class="sin-margin">Bootstrap, Lo mejor del mundo Parte 1</h3>
-                    </a>
-                    <p>Conoce el maravilloso framework que ha revolucionado la manera de trabajar para web</p>
-                </div>
-                <footer class="list-courses__author">
-                    <figure class="sin-margin">
-                        <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                            <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
-                            <figcaption>Yan Vallejo</figcaption>
-                        </a>
-                    </figure>
-                    <div>
-                        <a href="#" class="decoration-none">Diseño Web</a>
-                        <span>11 Videos 3 Horas</span>
-                    </div>
-                </footer>
-            </article>
-            <article class="list-courses__item">
-                <figure class="list-courses__image sin-margin">
-                    <a href="single-courses.html" title="Curso de Bootstrap">
-                        <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/item-courses.jpg" alt="Bootstrap 3" width="640" height="420">
-                    </a>
-                    <figcaption class="price price--premiun">Premium - $ 10</figcaption>
-                </figure>
-                <div class="list-courses__information">
-                    <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                        <h3 class="sin-margin">Bootstrap, Lo mejor del mundo Parte 1</h3>
-                    </a>
-                    <p>Conoce el maravilloso framework que ha revolucionado la manera de trabajar para web</p>
-                </div>
-                <footer class="list-courses__author">
-                    <figure class="sin-margin">
-                        <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
-                            <img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo" width="100" height="100">
-                            <figcaption>Yan Vallejo</figcaption>
-                        </a>
-                    </figure>
-                    <div>
-                        <a href="#" class="decoration-none">Diseño Web</a>
-                        <span>11 Videos 3 Horas</span>
-                    </div>
-                </footer>
-            </article>
+            <?php
+            // Loop Last Courses LearnPress
+                $args = array(
+                        'posts_per_page' => 6,
+                        'post_type' => 'lp_course'
+                    );
+                $lastPost = new WP_Query( $args );
+                if( $lastPost->have_posts() ):
+                    while( $lastPost->have_posts() ): $lastPost->the_post(); ?>
+                        <article class="list-courses__item">
+                            <figure class="list-courses__image sin-margin">
+                                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                    <?php echo $course->get_image( 'course_thumbnail' ); ?>
+                                </a>
+                                <figcaption class="price price--free">
+                                    <?php if ( $course->has_sale_price() ) { ?>
+                                        <span class="price--fixed">
+                                            <?php echo $course->get_origin_price_html() ?>
+                                        </span> |
+                                    <?php } ?>
+                                    <span class="price-promotion">
+                                        <?php echo $course->get_price_html() ?>
+                                    </span>
+                                </figcaption>
+                            </figure>
+                            <div class="list-courses__information">
+                                <a href="<?php the_permalink(); ?>" class="decoration-none" title="Curso de Bootstrap">
+                                    <h3 class="sin-margin"><?php the_title(); ?></h3>
+                                </a>
+                                <p><?php the_excerpt(); ?></p>
+                            </div>
+                            <footer class="list-courses__author">
+                                <figure class="sin-margin">
+                                    <a href="single-courses.html" class="decoration-none" title="Curso de Bootstrap">
+                                        <?php
+                                            $user = wp_get_current_user();
+                                            if ( $user ) :
+                                               ?>
+                                                    <img class="img-responsive" src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?> " width="100" height="100" />
+                                                <?php endif; ?>
+                                        <figcaption><?php the_author( ); ?></figcaption>
+                                    </a>
+                                </figure>
+                                <div>
+                                <?php $term_list = get_the_term_list( get_the_ID(), 'course_category', '', ', ', '' );
+                                    if ( $term_list ) {
+                                        echo $term_list;
+                                    }
+                                ?>
+                                <span>11 Videos 3 Horas</span>
+                                </div>
+                            </footer>
+                        </article>
+                <?php
+                    endwhile;
+                endif;
+                wp_reset_postdata();
+                ?>
         </section> <!-- End List Courses -->
             <a href="cursos.html" class="button button--main mb-5 button--animation" title="Ver todos los cursos">Ver todos los cursos</a>
         <section class="register">

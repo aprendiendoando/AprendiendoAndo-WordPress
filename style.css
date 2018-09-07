@@ -922,6 +922,8 @@ textarea {
     .list-courses__author div a{
         font-weight: 400;
         display: block;
+        text-decoration: none;
+        color: #FF5253;
     }
 
 .price{
@@ -938,6 +940,10 @@ textarea {
 
     .price--premiun{
          background-color: #6CC8BD;
+    }
+
+    .price--fixed{
+        text-decoration:line-through;
     }
 
 

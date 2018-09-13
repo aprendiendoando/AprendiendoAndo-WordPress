@@ -25,37 +25,7 @@
                     <a class="decoration-none" href="mailto:<?php the_field('header_correo_principal', 'option'); ?>?subject=<?php bloginfo('name'); ?>"><?php the_field('header_correo_principal', 'option'); ?></a>
                 </div>
                 <div class="header__rs">
-                    <?php 
-                        $header_redes_sociales = get_field('header_redes_sociales','option');
-                    ?>
-                    <?php 
-                        if($header_redes_sociales){
-                    ?>
-                            <ul class="list-none">
-                                <li>
-                                    <a class="decoration-none" href="<?php echo $header_redes_sociales['twitter_url']; ?>" title="Twitter <?php bloginfo('name'); ?>" target="_blank">
-                                        <i class="aprendiendoando-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="decoration-none" href="<?php echo $header_redes_sociales['facebook_url']; ?>" title="Facebook <?php bloginfo('name'); ?>" target="_blank">
-                                        <i class="aprendiendoando-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="decoration-none" href="<?php echo $header_redes_sociales['youtube_url']; ?>" title="Youtube <?php bloginfo('name'); ?>" target="_blank">
-                                        <i class="aprendiendoando-youtube"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="decoration-none" href="<?php echo $header_redes_sociales['rss_url']; ?>" title="RSS <?php bloginfo('name'); ?>" target="_blank">
-                                        <i class="aprendiendoando-rss"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                    <?php
-                        }
-                    ?>
+                    <?php get_template_part( 'share', 'content' ); ?>
                 </div>
             </div> <!-- End Header Top -->
             <div class="header__bottom">

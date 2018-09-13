@@ -1219,7 +1219,7 @@ textarea {
             }
         }
 
-        .register__newsletter input[type="text"]{
+        .register__newsletter input[type="email"]{
             display: block;
             width: 100%;
             text-align: center;
@@ -1227,6 +1227,23 @@ textarea {
             border:0;
             padding:0.5rem;
             box-sizing: border-box;
+            color:#369DC1;
+        }
+        .mc4wp-alert{
+            padding: 0.54rem;
+            border-radius: 5px;
+        }
+
+        .mc4wp-notice{
+            background-color:#F5BB00;
+        }
+
+        .mc4wp-error{
+            background-color:#FF5253;
+        }
+
+        .mc4wp-success{
+            background-color: #2F7B76;
         }
 
 @media screen and (min-width: 768px){

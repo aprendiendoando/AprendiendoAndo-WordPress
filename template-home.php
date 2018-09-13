@@ -135,12 +135,11 @@
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat</p>
                 </article>
                 <article class="register__newsletter">
-                    <strong>REGISTRARTE AHORA</strong>
-                    <p>Obten acceso a mas de 30 cursos, 100 horas de video, 30 proyectos practicos e información semanal via newsletter.</p>
-                    <form action="#" class="text-center">
-                        <input type="text" name="correo" id="correo" placeholder="example@gmail.com">
-                        <input type="submit" value="Suscribirse" class="button button--main">
-                    </form>
+                    <strong class="text--uppercase"><?php the_field('mailchimp_titulo', 'option'); ?></strong>
+                    <p><?php the_field('mailchimp_descripcion', 'option'); ?></p>
+                    <div class="text-center">
+                        <?php echo do_shortcode( '[mc4wp_form id="237"]'); ?>
+                    </div>
                 </article>
             </div>
         </section> <!-- End Register -->

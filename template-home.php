@@ -129,34 +129,40 @@
                     <?php
                     $args = array(
                             'type' => 'post',
-                            'posts_per_page' => 1,
+                            'posts_per_page' => 4,
                             'post_type' => 'testimonios',
                         );
 
                     $lastPost = new WP_Query( $args );
                     if( $lastPost->have_posts() ):
-
-                    while( $lastPost->have_posts() ): $lastPost->the_post(); ?>
-                    <div class="register__user">
-                        <figure class="sin-margin">
-                           <?php
-                            // check if the post has a Post Thumbnail assigned to it.
-                                if ( has_post_thumbnail() ) {
-                                    the_post_thumbnail();
-                                }
-                           ?>
-                        </figure>
-                        <div class="register__information">
-                            <h3> <?php the_title(); ?> </h3>
-                            <span>
-                                <?php $post_object = get_field('nombre_curso'); ?>
-                                <?php echo $post_object->post_title; ?>
-                            </span>
-                        </div>
-
+                    ?>
+                    <div class="js-slick">
+                        <?php
+                        while( $lastPost->have_posts() ): $lastPost->the_post(); ?>
+                            <div class="register__box">
+                                <div class="register__user">
+                                    <figure class="sin-margin">
+                                       <?php
+                                        // check if the post has a Post Thumbnail assigned to it.
+                                            if ( has_post_thumbnail() ) {
+                                                the_post_thumbnail();
+                                            } else{ ?>
+                                                <img src="<?php echo get_template_directory_uri() ?>/img/user-not-found.png" alt="Usuario sin Imagen">
+                                            <?php } ?>
+                                    </figure>
+                                    <div class="register__information">
+                                        <h3> <?php the_title(); ?> </h3>
+                                        <span>
+                                            <?php $post_object = get_field('nombre_curso'); ?>
+                                            <?php echo $post_object->post_title; ?>
+                                        </span>
+                                    </div>
+                                </div>
+                                <?php the_content(); ?>
+                            </div>
+                        <?php endwhile; ?>
                     </div>
-                    <?php the_content(); ?>
-                    <?php endwhile;
+                    <?php
                         endif;
                         wp_reset_postdata();
                     ?>

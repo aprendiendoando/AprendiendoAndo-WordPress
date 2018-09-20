@@ -17,6 +17,25 @@
         ?>
     </footer> <!-- end Footer -->
     <?php wp_footer(); ?>
+
+    <!-- Add Js Slick Library -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        (function($) {
+            $(document).ready(function() {
+                $('.js-slick').slick({
+                    dots: true,
+                    lazyLoad: 'ondemand',
+                    autoplay: true,
+                    autoplaySpeed: 7000,
+                    infinite: true,
+                    fade: true,
+                    cssEase: 'linear',
+                    arrows: 'false'
+                });
+            });
+        })(jQuery);
+    </script>
     <!-- Scripts -->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

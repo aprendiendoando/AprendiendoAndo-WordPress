@@ -8,6 +8,12 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700|Raleway:300,400,500,500i,800" rel="stylesheet">
+
+    <!-- Add CSS Slick Library -->
+    <!-- https://cdnjs.com/libraries/slick-carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+
     <?php wp_head(); ?>
 </head>
 

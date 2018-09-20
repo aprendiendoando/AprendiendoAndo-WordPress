@@ -8,13 +8,13 @@
         <aside class="box filterCourses">
             <div class="filterCourses__tags">
                 <span>Categoría: </span>
-                <ul class="ap-tags list-none">
-                    <li><a href="#">Diseño Web</a></li>
-                    <li><a href="#">Bootstrap</a></li>
-                    <li><a href="#">SublimeText</a></li>
-                    <li><a href="#">Css</a></li>
-                </ul>
-                <?php echo get_the_category_list(); ?>
+                <?php
+                    // https://codex.wordpress.org/Function_Reference/get_the_term_list
+                    $term_list = get_the_term_list( get_the_ID(), 'course_category', '<ul class="ap-tags list-none"><li>', '</li><li>', '</li></ul>' );
+                     if ( $term_list ) {
+                        echo $term_list;
+                        }
+                ?>
             </div>
         </aside>
         <section class="box courseInformation ">
@@ -85,17 +85,19 @@
             </article>
             <!-- End Content information course main -->
             <aside class="courseInformation__teacher text-center">
-                <figure class="courseInformation__teacher--image">
-                    <img class="rounded-circle" src="img/yan-arlex-vallejo.jpg" alt="Yan Arlex Vallejo">
-                    <figcaption>Yan Arlex Vallejo</figcaption>
+                <figure class="courseInformation__teacher--image rounded-circle">
+                    <?php echo $course->get_instructor()->get_profile_picture(); ?>
+                    <figcaption><?php echo $course->get_instructor_html(); ?></figcaption>
                 </figure>
                 <div class="courseInformation__teacher--price mt-2">
                     <strong class="courseInformation__teacher--titleSecundary">Precio</strong>
-                    <span class="courseInformation__teacher--value ap-price">$35.000</span>
+                    <span class="courseInformation__teacher--value ap-price">
+                        <?php echo $course->get_price_html(); ?>
+                    </span>
                 </div>
                  <div class="courseInformation__teacher--otherInformation mt-2">
                     <strong class="courseInformation__teacher--titleSecundary">Duración</strong>
-                    <span class="courseInformation__teacher--value">130 horas</span>
+                    <span class="courseInformation__teacher--value"><?php echo $course->duration;?></span>
                  </div>
                 <div class="courseInformation__teacher--otherInformation mt-2">
                     <strong class="courseInformation__teacher--titleSecundary">Contenido</strong>

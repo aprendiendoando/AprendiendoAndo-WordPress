@@ -13,7 +13,7 @@
         <?php
            // https://developer.wordpress.org/reference/functions/set_query_var/
             set_query_var('flex', 'd-flex');
-            get_template_part('share-content');
+            get_template_part('parts/share-content');
         ?>
     </footer> <!-- end Footer -->
     <?php wp_footer(); ?>

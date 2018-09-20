@@ -25,7 +25,7 @@
                     <a class="decoration-none" href="mailto:<?php the_field('header_correo_principal', 'option'); ?>?subject=<?php bloginfo('name'); ?>"><?php the_field('header_correo_principal', 'option'); ?></a>
                 </div>
                 <div class="header__rs">
-                    <?php get_template_part( 'share', 'content' ); ?>
+                    <?php get_template_part( 'parts/share', 'content' ); ?>
                 </div>
             </div> <!-- End Header Top -->
             <div class="header__bottom">

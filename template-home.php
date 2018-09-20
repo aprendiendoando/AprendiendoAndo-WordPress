@@ -73,14 +73,15 @@
                                     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                         <?php echo $course->get_image( 'course_thumbnail' ); ?>
                                     </a>
-                                    <figcaption class="price price--free">
+                                    <?php $price = $course->get_price_html(); ?>
+                                    <figcaption class="price <?php if($price === 'Gratis') {echo "price--free"; } else {echo "price--premiun"; } ?>">
                                         <?php if ( $course->has_sale_price() ) { ?>
                                             <span class="price--fixed">
-                                                <?php echo $course->get_origin_price_html() ?>
+                                                <?php echo $course->get_origin_price_html(); ?>
                                             </span> |
                                         <?php } ?>
                                         <span class="price-promotion">
-                                            <?php echo $course->get_price_html() ?>
+                                            <?php echo $price; ?>
                                         </span>
                                     </figcaption>
                                 </figure>
@@ -96,11 +97,13 @@
                                         <?php echo $course->get_instructor_html(); ?>
                                     </figure>
                                     <div>
-                                        <?php $term_list = get_the_term_list( get_the_ID(), 'course_category', '', ', ', '' );
-                                            if ( $term_list ) {
-                                                echo $term_list;
+                                        <?php
+                                        // https://codex.wordpress.org/Function_Reference/get_the_term_list
+                                        $term_list = get_the_term_list( get_the_ID(), 'course_category', '<ul class="only-category list-none"><li>', '</li><li>', '</li></ul>' );
+                                         if ( $term_list ) {
+                                            echo $term_list;
                                             }
-                                        ?>
+                                    ?>
                                         <span><?php echo $course->duration;?></span>
                                     </div>
                                 </footer>
@@ -114,7 +117,7 @@
                     </a>
                 <?php
                 else:
-                    get_template_part( 'content', 'missing' );
+                    get_template_part( 'parts/content', 'missing' );
                 endif;
                 wp_reset_postdata();
             ?>
@@ -123,16 +126,40 @@
             <div class="box box--center">
                 <article class="register__testimonial">
                     <strong class="text--uppercase">Algunos estudiantes cuentan su experiencia</strong>
+                    <?php
+                    $args = array(
+                            'type' => 'post',
+                            'posts_per_page' => 1,
+                            'post_type' => 'testimonios',
+                        );
+
+                    $lastPost = new WP_Query( $args );
+                    if( $lastPost->have_posts() ):
+
+                    while( $lastPost->have_posts() ): $lastPost->the_post(); ?>
                     <div class="register__user">
                         <figure class="sin-margin">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/yan-arlex-vallejo.jpg" alt="">
+                           <?php
+                            // check if the post has a Post Thumbnail assigned to it.
+                                if ( has_post_thumbnail() ) {
+                                    the_post_thumbnail();
+                                }
+                           ?>
                         </figure>
                         <div class="register__information">
-                            <h3>Yan Vallejo</h3>
-                            <span>Bootstrap lo mejor 1</span>
+                            <h3> <?php the_title(); ?> </h3>
+                            <span>
+                                <?php $post_object = get_field('nombre_curso'); ?>
+                                <?php echo $post_object->post_title; ?>
+                            </span>
                         </div>
+
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat</p>
+                    <?php the_content(); ?>
+                    <?php endwhile;
+                        endif;
+                        wp_reset_postdata();
+                    ?>
                 </article>
                 <article class="register__newsletter">
                     <strong class="text--uppercase"><?php the_field('mailchimp_titulo', 'option'); ?></strong>

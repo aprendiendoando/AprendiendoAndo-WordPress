@@ -290,7 +290,7 @@ textarea {
 
 
 
-
+    .lp-course-buttons .lp-button,
     .button--main{
         background-color: #FF5253;
         text-align: center;
@@ -299,6 +299,8 @@ textarea {
         margin-left: auto;
         display:block;
     }
+
+
 
 
 
@@ -455,16 +457,23 @@ textarea {
     }
 
         .courseInformation__teacher--image{
-            max-width: 96px;
             margin-left: auto;
             margin-right: auto;
         }
 
+        .courseInformation__teacher--image img{
+            max-width: 96px;
+        }
+
         .courseInformation__teacher--image figcaption{
             color: #4D4D4D;
-
             font-size: 1.1rem;
             margin-top: 0.5rem;
+        }
+
+        .courseInformation__teacher--image a{
+            text-decoration: none;
+            color: #4D4D4D;
         }
 
         .courseInformation__teacher--price{
@@ -530,17 +539,37 @@ textarea {
 .courseSyllabus__item{
     border-bottom: 2px solid #CDCDCD;
 }
-.courseSyllabus__item li{
+.courseSyllabus__item li,
+.course-curriculum ul.curriculum-sections .section-content .course-item .item-name{
     color:#000000;
     font-size: 1.1rem;
     margin-bottom: 0.2rem;
+
 }
 
-.courseSyllabus__title{
-    font-weight: 400;
-    color: #0071BC;
-    font-size: 1.4rem;
+.course-curriculum ul.curriculum-sections .section-content .course-item .section-item-link{
+    text-decoration: none;
 }
+
+.courseSyllabus__title,
+.course-curriculum ul.curriculum-sections .section-header .section-title{
+    font-weight: 400 !important;
+    color: #0071BC;
+    font-size: 1.4rem !important;
+}
+
+.course-curriculum ul.curriculum-sections .section-content .course-item.course-item-lp_lesson .section-item-link:before{
+    color: #0071BC;
+}
+
+.course-curriculum ul.curriculum-sections .section-content .course-item .course-item-meta .count-questions{
+    background-color:#FF5253 !important;
+}
+
+.course-curriculum ul.curriculum-sections .section-content .course-item .course-item-meta .duration{
+    background-color:#6CC8BD !important;
+}
+
 
 .content-not-found{
     text-align: center;
@@ -1302,9 +1331,6 @@ textarea {
         margin: 0;
     }
 
-
-
-
 .youtube-analytics{
     background-color: #F9F9F9;
     padding: 3rem 0;
@@ -1371,6 +1397,46 @@ textarea {
                font-size:2rem;
             }
     }
+
+
+/*LearnPress*/
+    .learn-press-breadcrumb a,
+    ul.learn-press-nav-tabs .course-nav a{
+        text-decoration: none;
+        color:#0071BC;
+
+    }
+
+    ul.learn-press-nav-tabs .course-nav.active{
+        background-color: #FF5253;
+    }
+
+    ul.learn-press-nav-tabs .course-nav.active a{
+         color: #fff;
+    }
+
+    .learn-press-breadcrumb{
+        margin-top:1rem;
+        color: #FF5253;
+    }
+
+    .learn-press-breadcrumb a:hover {
+       color:#FF5253;
+    }
+
+    .author-name a{
+        text-decoration: none;
+        color:#4D4D4D;
+        font-size: 1.2rem;
+
+    }
+
+
+
+
+
+
+
 
 /* ==========================================================================
    Helper classes

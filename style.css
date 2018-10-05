@@ -45,14 +45,16 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+    background-color: #FE5352;
+    color:#fff;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+    background-color: #FE5352;
+    color:#fff;
 }
+
+
 
 
 @font-face {

@@ -9,7 +9,6 @@
                 endif;
 
         ?>
-
         <section class="box box__courses">
             <?php
                 // check if the repeater field has rows of data

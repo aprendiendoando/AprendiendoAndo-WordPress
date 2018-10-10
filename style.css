@@ -1080,11 +1080,14 @@ textarea {
       max-width: 0%;
       overflow: hidden;
     }
+
+    .post-type-archive-lp_course .nav__top li.menu-item-44 a:before,
     .nav__top a:hover:before,
     .nav__top .current-menu-item a:before {
       opacity: 1;
       width: 100%;
     }
+    .post-type-archive-lp_course .nav__top li.menu-item-44 a:after,
     .nav__top a:hover:after,
     .nav__top .current-menu-item a:after {
       max-width: 100%;

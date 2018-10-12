@@ -234,7 +234,7 @@ textarea {
  /*
  * Botones
  */
-
+.learn-press button,
  .button{
      border-radius: 10px;
      font-family: 'Dosis';
@@ -291,8 +291,11 @@ textarea {
     }
 
 
-
+    .learn-press button,
     .lp-course-buttons .lp-button,
+    .lp-button-back button,
+    .button-complete-lesson,
+    .learnpress-page .lp-button,
     .button--main{
         background-color: #FF5253;
         text-align: center;
@@ -301,12 +304,6 @@ textarea {
         margin-left: auto;
         display:block;
     }
-
-
-
-
-
-
 
 .box{
     width: 100%;
@@ -1472,6 +1469,114 @@ textarea {
 .slick-dots li button:before{
     color:#fff;
 }
+
+
+/*Formulario*/
+
+.wpcf7{
+    max-width: 500px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+.form-control{
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+    .form-control:focus{
+        color: #495057;
+        background-color: #fff;
+        border-color: #0071BC;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0,113,188,.25);
+    }
+
+textarea.form-control{
+    height: auto;
+}
+
+/*Lecciones del curso*/
+
+#course-item-content-header .course-title a,
+#course-item-content-header .toggle-content-item{
+    text-decoration:none;
+    color: #fff;
+}
+
+#course-item-content-header .course-item-search input::-webkit-input-placeholder,
+#course-item-content-header .course-item-search button{
+    color: #fff !important;
+}
+
+#course-item-content-header,
+body.confirm #popup_container #popup_message{
+    background-color: #2980b9 !important;
+    color: #fff;
+}
+
+#course-item-content-header .form-button.lp-button-back button{
+    margin-top: 10px;
+    margin-bottom: 0;
+    height: 35px;
+}
+
+body.confirm #popup_container .close,
+.learn-press-form.completed p{
+    color:#FF5253;
+}
+
+.course-item-nav .prev span, .course-item-nav .next span,
+.course-item-nav .prev a,
+.course-item-nav .next a{
+    color: #2980b9 !important;
+}
+
+/*Checkout LearnPress*/
+
+.learn-press-checkout a{
+    color: #2980b9;
+}
+
+.learnpress{
+    padding-bottom: 5rem;
+}
+
+#learn-press-profile-header,
+#learn-press-user-profile,
+#learn-press-profile-nav,
+#learn-press-profile-nav:before{
+    background-color: #2980b9 !important;
+    color: #fff;
+
+}
+
+#learn-press-profile-header{
+    padding-bottom: 5rem;
+}
+
+
 
 
 /*

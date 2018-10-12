@@ -12,7 +12,7 @@
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>cursos/" class="button button--main ml-0 button--animation">Ver todos los cursos</a>
                 </div>
                 <div class="slider__right">
-                    <img src="<?php the_field('imagen_secundaria', 'option'); ?>)" alt="<?php bloginfo('name'); ?>" width="400" height="285">
+                    <img src="<?php the_field('imagen_secundaria', 'option'); ?>" alt="<?php bloginfo('name'); ?>" width="400" height="285">
                 </div>
             </div>
         </section> <!-- End Slider -->

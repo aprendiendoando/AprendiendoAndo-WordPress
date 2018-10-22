@@ -899,6 +899,8 @@ textarea {
         -webkit-transition: all 0.3s ease-in-out;
         -moz-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
     }
 
         .list-courses__item:hover{
@@ -940,12 +942,10 @@ textarea {
             font-weight: 500;
             font-size:1.5rem;
             line-height: 1.1;
-
         }
 
          .list-courses__information p{
             font-size:1.1rem;
-            border-bottom:1px solid #CDCDCD;
             padding-bottom: 0.5rem;
 
         }
@@ -954,8 +954,10 @@ textarea {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 1rem 1rem;
+        padding: 1rem;
         font-family: 'Raleway', sans-serif;
+        margin-top: auto;
+        border-top: 1px solid #CDCDCD;
     }
 
     .list-courses__author figure{

@@ -939,6 +939,7 @@ textarea {
         .list-courses__information h3{
             font-weight: 500;
             font-size:1.5rem;
+            line-height: 1.1;
 
         }
 

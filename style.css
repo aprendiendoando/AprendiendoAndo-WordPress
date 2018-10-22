@@ -444,6 +444,26 @@ textarea {
     background-color: #ccc;
 }
 
+.contact__box{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+    @media screen and (min-width:768px){
+        .contact__box{
+            flex-direction: row;
+        }
+
+        .contact__image{
+            flex-basis: 40%;
+        }
+
+        .contact__information{
+            flex-basis: 50%;
+        }
+    }
+
 .courseInformation{
     display: flex;
     flex-direction: column;
@@ -1488,7 +1508,7 @@ textarea {
     max-width: 500px;
     margin-left: auto !important;
     margin-right: auto !important;
-    margin-top: 5rem !important;
+    margin-top: 2rem !important;
     margin-bottom: 1rem !important;
 }
 

@@ -8,7 +8,7 @@
         </div>
     </aside>
     <main class="main mt-0">
-        <section class="box">
+        <section class="box mb-5">
             <?php
             // Loop Last Courses LearnPress
                 $args = array(
@@ -32,5 +32,8 @@
                 wp_reset_postdata();
             ?>
         </section> <!-- End List Courses -->
+        <!-- Start Relationship Courses -->
+            <?php get_template_part( 'parts/courses', 'rand' ); ?>
+        <!-- End Relationship Courses -->
     </main> <!-- End Main -->
 <?php get_footer(  ); ?>

@@ -494,6 +494,11 @@ textarea {
                 color: #0071BC;
                 font-size: 2.5rem;
             }
+    
+    .courseInformation__content a{
+        color:#FF5253;
+        text-decoration:none;
+    }
 
 
 
@@ -875,7 +880,8 @@ textarea {
 
 
 .list-courses,
-.list-courses .box{
+.list-courses .box,
+.learn-press-courses{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -903,7 +909,8 @@ textarea {
 
     @media screen and (min-width: 768px){
         .list-courses,
-        .list-courses .box{
+        .list-courses .box,
+        .learn-press-courses{
             justify-content: center;
         }
         .list-courses__item{
@@ -915,7 +922,8 @@ textarea {
 
     @media screen and (min-width:1024px){
         .list-courses,
-        .list-courses .box{
+        .list-courses .box,
+        .learn-press-courses{
             justify-content: space-between;
         }
         .list-courses__item{
@@ -1576,7 +1584,18 @@ body.confirm #popup_container .close,
     padding-bottom: 5rem;
 }
 
+/* Form Search */
 
+.learn-press-search-course-form{
+    display: none;
+}
+
+
+form[name="search-course"] .search-course-button{
+    margin-top: 0;
+    top: 8px !important;
+    right: 8px !important;
+}
 
 
 /*

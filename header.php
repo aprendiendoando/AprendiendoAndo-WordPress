@@ -7,6 +7,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#FF5253">
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700|Raleway:300,400,500,500i,800" rel="stylesheet">
 
     <!-- Add CSS Slick Library -->

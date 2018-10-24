@@ -37,21 +37,27 @@
                 </div>
             </div> <!-- End Header Top -->
             <div class="header__bottom">
+                <nav class="nav__main">
+                    <div class="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                       <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'primary',
+                                'container' => false,
+                                'menu_class' => 'list-none nav__top'
+                                )
+                            );
+                        ?>
+                    </div>
+                </nav> <!-- End Nav Main -->
                 <div class="logo">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                         <img src="<?php the_field('header_logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>">
                     </a>
                 </div> <!-- End Logo -->
-                <nav class="nav__main">
-                   <?php
-                        wp_nav_menu(array(
-                            'theme_location' => 'primary',
-                            'container' => false,
-                            'menu_class' => 'list-none nav__top'
-                            )
-                        );
-                    ?>
-                </nav> <!-- End Nav Main -->
             </div> <!-- End Header Bottom -->
         </div>
     </header>

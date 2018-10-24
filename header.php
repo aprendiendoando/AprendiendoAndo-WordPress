@@ -37,6 +37,11 @@
                 </div>
             </div> <!-- End Header Top -->
             <div class="header__bottom">
+                <div class="logo">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                        <img src="<?php the_field('header_logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>">
+                    </a>
+                </div> <!-- End Logo -->
                 <nav class="nav__main">
                     <div class="menuToggle">
                         <input type="checkbox" />
@@ -53,11 +58,6 @@
                         ?>
                     </div>
                 </nav> <!-- End Nav Main -->
-                <div class="logo">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                        <img src="<?php the_field('header_logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>">
-                    </a>
-                </div> <!-- End Logo -->
             </div> <!-- End Header Bottom -->
         </div>
     </header>

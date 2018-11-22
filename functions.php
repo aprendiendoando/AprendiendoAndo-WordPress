@@ -1,5 +1,10 @@
 <?php
 
+
+// WP Head and other cleanup functions
+require_once(get_template_directory().'/functions/cleanup.php'); 
+
+
 	// Activando el soporte para las image_size_names_choose
 	if ( function_exists( 'add_theme_support' ) ) {
 	    add_theme_support( 'post-thumbnails' );

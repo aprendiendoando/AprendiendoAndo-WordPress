@@ -1706,6 +1706,26 @@ textarea.form-control{
 
 /*Lecciones del curso*/
 
+h2.course-title{
+    display:none;
+}
+
+@media screen and (min-width:768px){
+    h2.course-title{
+        display:inline-block;
+    }
+}
+
+@media screen and (max-width: 340px){
+  body.course-item-popup #course-item-content-header .course-item-search {
+      width: 122px !important;
+  }
+}
+
+
+
+
+
 #course-item-content-header .course-title a,
 #course-item-content-header .toggle-content-item{
     text-decoration:none;
